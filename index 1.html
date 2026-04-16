@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Тестування</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Тестування з інформатики</h1>
+</header>
+
+<div id="leftBlock">
+<h3>Логотип</h3>
+<img src="https://via.placeholder.com/150">
+</div>
+
+<div id="infoPage">
+<h2>Пройди тест:</h2>
+
+<form id="quiz">
+
+<p>1. Що таке HTML?</p>
+<input type="radio" name="q1"> Мова програмування<br>
+<input type="radio" name="q1" correct> Мова розмітки<br>
+<input type="radio" name="q1"> База даних<br>
+
+<p>2. Що таке CSS?</p>
+<input type="radio" name="q2"> Браузер<br>
+<input type="radio" name="q2" correct> Стилі сторінки<br>
+<input type="radio" name="q2"> Сервер<br>
+
+<p>3. Для чого потрібен JavaScript?</p>
+<input type="radio" name="q3"> Для стилів<br>
+<input type="radio" name="q3"> Для тексту<br>
+<input type="radio" name="q3" correct> Для логіки сайту<br>
+
+<p>4. Тег для зображення?</p>
+<input type="radio" name="q4"> div<br>
+<input type="radio" name="q4" correct> img<br>
+<input type="radio" name="q4"> p<br>
+
+<p>5. Тег для посилання?</p>
+<input type="radio" name="q5"> link<br>
+<input type="radio" name="q5"> href<br>
+<input type="radio" name="q5" correct> a<br>
+
+<p>6. Що таке сайт?</p>
+<input type="radio" name="q6"> Файл<br>
+<input type="radio" name="q6" correct> Веб-сторінка або набір сторінок<br>
+<input type="radio" name="q6"> Програма тільки для ПК<br>
+
+<br>
+<button type="button" onclick="checkQuiz()">Перевірити</button>
+
+</form>
+
+<p id="result"></p>
+
+</div>
+
+<footer>
+<p>© 2025 Всі права захищено</p>
+</footer>
+
+<script>
+function checkQuiz() {
+    let correct = document.querySelectorAll('input[correct]:checked').length;
+    document.getElementById("result").innerText = "Правильних відповідей: " + correct + " з 6";
+}
+</script>
+
+</body>
+</html>
